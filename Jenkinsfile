@@ -29,7 +29,15 @@ pipeline{
             steps{
                 sh '''
                     hostname
-                    echo "STEP2"
+                    echo "STEP3"
+                    echo "ONE = $ONE"
+                '''
+            }
+        }
+        stage('build'){            
+            steps{
+                sh '''
+                    echo "STEP4"
                     echo "ONE = $ONE"
                 '''
             }
