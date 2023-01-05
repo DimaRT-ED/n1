@@ -10,6 +10,7 @@ pipeline{
             steps{
                 sh  ' pwd '
                 echo "STEP1"
+                sh 'sh ./3.sh'
             }
         }
         stage('test'){
