@@ -34,7 +34,7 @@ pipeline{
                 '''
             }
         }
-        stage('build'){            
+        stage('build2'){            
             steps{
                 sh '''
                     echo "STEP4"
