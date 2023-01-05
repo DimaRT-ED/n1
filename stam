@@ -1,0 +1,27 @@
+pipeline{
+    agent any
+    
+    environment{
+        ONE='STAM_ONE'
+    }
+    
+    stages{
+        stage('clone'){
+            steps{
+                sh  ' pwd '
+                echo "STEP1"
+                sh 'sh ./3.sh'
+            }
+        }
+        stage('test'){
+            steps{
+                sh '''
+                    hostname
+                    echo "STEP2"
+                    echo " Build number is : ${BUILD_NUMBER}"
+                    echo "ONE = $ONE"
+                '''
+            }
+        }
+    }
+}
