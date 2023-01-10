@@ -9,6 +9,7 @@ pipeline{
         stage('clone'){
             steps{
                 sh  ' pwd '
+                sh 'ls -la'
                 echo "STEP1"
                 sh 'sh ./3.sh'
             }
